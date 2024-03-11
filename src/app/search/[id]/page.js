@@ -18,14 +18,16 @@ export default async function PostPage({ params }) {
         <div>
             <ul>
                 {post.rows.map((post) => (
-                    <li>ID: {post.id}
+                    <li key={post.id}>
+                        ID: {post.id}
                         Title: {post.title}
-                        Content: {post.content}</li>
+                        Content: {post.content}
+                    </li>
                 ))}
             </ul>
         </div>
-
     );
+
 }
 
 
